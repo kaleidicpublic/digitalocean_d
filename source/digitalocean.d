@@ -393,12 +393,10 @@ OceanResult!Droplet findDroplet(OceanAPI ocean, string name)
         ("bad response from Digital Ocean: "~dropletResults.prettyPrint));
     (*droplets).array.each!(a=>enforce(("name" in a.object) && a.object["name"].type==JSON_TYPE.STRING));
     auto i=(*droplets).array.map!(a=>a.object["name"].str).array.countUntil(name);
-    writefln("i=%s",i);
     if (i==-1)
     {
         return OceanResult!Droplet(false,ret);
     }
-    writefln("i=%s\n%s",i,(*droplets).array[i].object["id"].integer);
     //auto p=("id" in ((*droplets).array[i]));
     //enforce(p !is null, new Exception
       //  ("findDroplet cannot find id in results - malformed JSON?\n"~dropletResults.prettyPrint));
