@@ -2,7 +2,7 @@ D language implementation of the Digital Ocean API (version 2)
 
 
 Laeeth Isharc and Kaleidic Associates/Digital Ocean 2015
-Boost License
+MIT License
 
 Use at your peril - this is alpha and barely tested.  But should be useful for some
 
