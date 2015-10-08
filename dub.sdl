@@ -1,0 +1,7 @@
+name "digitalocean_api"
+description "D Language implementation of Digital Ocean API."
+copyright "Copyright © 2015, Laeeth Isharc, Kaleidic Associates, and Digital Ocean"
+authors "Laeeth Isharc and Kaleidic Associates"
+targetType "executable"
+sourceFiles "keys/source/auth.d" "source/digitalocean.d" "source/prettyjson.d"
+libs "curl"
